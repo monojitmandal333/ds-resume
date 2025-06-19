@@ -1,0 +1,166 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+
+\pagestyle{empty}
+
+% Adjust section spacing
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+
+% Set margins
+\setlength{\tabcolsep}{0em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \textbf{#1} \hfill {#2} \\
+    \emph{#3} \hfill {#4} \\
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
+\renewcommand{\labelitemii}{$\circ$"}
+
+\begin{document}
+
+%----------HEADER-----------------
+\begin{center}
+    {\LARGE \textbf{Monojit Mandal}}\\
+    \href{mailto:monojitmandal333@gmail.com}{monojitmandal333@gmail.com} $|$ +91-8272966790 $|$ 
+    \href{https://www.linkedin.com/in/monojitmandal/}{linkedin.com/in/monojitmandal} $|$ 
+    \href{https://github.com/yourgithub}{github.com/yourgithub} $|$ Kolkata, India
+\end{center}
+
+%----------SUMMARY----------------
+\section*{Summary}
+Data Scientist with 5+ years of experience in building data-driven solutions using machine learning, statistical and mathematical modeling, and data visualization. Proven expertise in Python, SQL, and Cloud platforms. Strong background in delivering actionable business insights and developing scalable models for production environments.
+
+%----------SKILLS-----------------
+\section*{Skills and Expertise}
+\textbf{Languages:} Python, R, SQL \\
+\textbf{Libraries/Frameworks:} pandas, NumPy, scikit-learn, TensorFlow, PyTorch, Polars, Matplotlib, Seaborn \\
+\textbf{Tools/Platforms:} Jupyter, Git, Docker, MLflow, Airflow, Streamlit, FastAPI \\
+\textbf{Databases/Cloud:} MSSQL, Oracle, BigQuery, GCP (Vertex AI)\\
+\textbf{Domain/Function:} Manufacturing Analytics, Supply Chain Analytics, Reliability Modeling, Operations Research, Machine Learning, NLP
+
+%----------EXPERIENCE-------------
+\section*{Professional Experience}
+\begin{itemize}
+    \resumeSubheading
+      {Decision Scientist, Supply Chain}{June 2024 -- Present}
+      {Accenture}{Kolkata, India}
+      \begin{itemize}
+          \resumeItem{
+            Developed an Inventory to Order matching algorithm for a Steel Manufacturer to optimize yield, 
+            Inventory and Service Leve using a Multi Objective Greedy Heuristic based optimization model. 
+            Considering dimension, quality and chemistry as matching criteria, model was able to pick the 
+            best order for inventories leading to $\sim$2.5\% better yield and selected older materials ($\sim$7 days) 
+            to older coils ($\sim$ 14 days) to reduce risk of material degradation and risk of not meeting target 
+            date for orders when compared against existing manual process.
+            }
+          \resumeItem{
+            Developed a Vendor Negotiation chatbot for big Retailers/FMCG/CPG to help automate negotiations with tail
+            spend suppliers (low volume/transaction) to help automate negotiations. Agentic Architecture with LLM was used to understand priority levers in
+            the negotiation process and based on set parameters it finds competitive offers for suppliers.
+          }
+          \resumeItem{
+            Developed a POC MILP model for an energy retailer/distributor company to optimize Vessel Routing and
+            Scheduling process more efficiently to reduce Fixed Cost, Port operating cost, Demurrage Cost while
+            considering multiple factors like Inventory levels, Vessel utilization, port demand, berth availability etc
+          }
+      \end{itemize}
+
+    \resumeSubheading
+      {Data Scientist, Supply Chain}{Mar 2021 -- June 2024}
+      {General Mills}{Mumbai, India}
+      \begin{itemize}
+          \resumeItem{
+            Developed a MILP model to recommend daily optimal production plan of Snacks for a year horizon in such a
+            way that total Changeover time is minimum, and inventory level is balanced (balancing stockout and overflow).
+            This tool can potentially save $\sim\$$2 MM/Year for a Manufacturing Line by reducing average inventory by $\sim$25 \%
+            and reducing changeover time by $\sim$15 \%
+          }
+          \resumeItem{
+            Reduction of Manufacturing waste in Refrigerated Frozen Baked Goods product by recommending optimal
+            controlling parameter ranges during the manufacturing process, leading to savings of $\sim\$$8 M/Year. Generalized
+            Linear Model (Poisson’s Regression) used to establish the relationship between Reject and controlling
+            parameters with R square of $\sim$50 \%.
+          }
+          \resumeItem{
+            Developed Ramp Up Analysis tool (self-serve) to improve System Reliability of Manufacturing Systems by
+            $\sim\$$1.5\% leading to potential savings of $\sim\$$ 9 MM/Year. Using the mean shift Changepoint algorithm Ramp Up
+            and post Ramp Up phase were identified. A self-serve Dash App was developed to share actionable insights
+            to System Engineers and root cause analysis.
+          }
+      \end{itemize}
+    
+    \resumeSubheading
+      {Analytics Consultant}{Nov 2020 -- Mar 2021}
+      {EXL Analytics}{Remote}
+      \begin{itemize}
+          \resumeItem{Performed exploratory data analysis (EDA) on retail transaction data to uncover purchasing trends; findings contributed to a 10\% increase in campaign ROI.}
+          \resumeItem{Built regression models predicting sales performance; improved MAPE by 8\%.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Data Analyst Intern}{July 2019 -- Dec 2019}
+      {Tata Steel}{Kalinganagar, India}
+      \begin{itemize}
+          \resumeItem{Performed exploratory data analysis (EDA) on retail transaction data to uncover purchasing trends; findings contributed to a 10\% increase in campaign ROI.}
+          \resumeItem{Built regression models predicting sales performance; improved MAPE by 8\%.}
+      \end{itemize}
+\end{itemize}
+
+%----------PROJECTS---------------
+\section*{Acadenic Projects}
+\begin{itemize}
+    \resumeSubheading
+      {End-to-End ML Pipeline for Fraud Detection}{GitHub Link}
+      {Python, scikit-learn, FastAPI, Docker}{}
+      \resumeItem{Designed an end-to-end fraud detection pipeline processing 1M+ records, achieving 94\% ROC-AUC. Containerized API served predictions at scale.}
+
+    \resumeSubheading
+      {Time Series Forecasting for Demand Prediction}{GitHub Link}
+      {Python, Prophet, pandas, Polars}{}
+      \resumeItem{Built time series models to predict product demand, reducing stockouts by 12\% in simulation environment.}
+\end{itemize}
+
+%----------EDUCATION--------------
+\section*{Education}
+\begin{itemize}
+  \resumeSubheading
+    {Master of Science in Data Science}{Aug 2019 -- May 2021}
+    {ABC University}{City, Country}
+    \resumeItem{Relevant Coursework: Machine Learning, Statistical Inference, Big Data Analytics, Deep Learning}
+\end{itemize}
+
+%----------CERTIFICATIONS---------
+\section*{Certifications}
+\begin{itemize}
+    \item AWS Certified Machine Learning – Specialty
+    \item Google Professional Data Engineer
+    \item Coursera Deep Learning Specialization
+\end{itemize}
+
+%----------AWARDS---------------
+\section*{Achievements \& Awards}
+\begin{itemize}
+    \item Top 5\% in Kaggle Titanic Competition (2024)
+    \item Winner, ABC Hackathon 2023 (Theme: AI for Retail)
+\end{itemize}
+
+\end{document}
