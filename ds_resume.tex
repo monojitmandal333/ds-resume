@@ -1,0 +1,230 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+
+\pagestyle{empty}
+
+% Adjust section spacing
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+
+% Set margins
+\setlength{\tabcolsep}{0em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \textbf{#1} \hfill {#2} \\
+    \emph{#3} \hfill {#4} \\
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
+\renewcommand{\labelitemii}{$\circ$"}
+
+\begin{document}
+
+%----------HEADER-----------------
+\begin{center}
+    {\LARGE \textbf{Monojit Mandal}}\\
+    \href{mailto:monojitmandal333@gmail.com}{monojitmandal333@gmail.com} $|$ +91-8272966790 $|$ 
+    \href{https://www.linkedin.com/in/monojitmandal/}{linkedin.com/in/monojitmandal} $|$ 
+    \href{https://github.com/yourgithub}{github.com/yourgithub} $|$ Kolkata, India
+\end{center}
+
+%----------SUMMARY----------------
+\section*{Summary}
+Data Scientist with 5+ years of experience in building data-driven solutions using machine learning, statistical and mathematical modeling, and data visualization. Proven expertise in Python, SQL, and Cloud platforms. Strong background in delivering actionable business insights and developing scalable models for production environments.
+
+%----------SKILLS-----------------
+\section*{Skills and Expertise}
+\textbf{Languages:} Python, R, SQL \\
+\textbf{Libraries/Frameworks:} pandas, NumPy, scikit-learn, TensorFlow, PyTorch, Polars, Matplotlib, Seaborn \\
+\textbf{Tools/Platforms:} Jupyter, Git, Docker, MLflow, Airflow, Streamlit, FastAPI \\
+\textbf{Databases/Cloud:} MSSQL, Oracle, BigQuery, GCP (Vertex AI)\\
+\textbf{Domain/Function:} Manufacturing Analytics, Supply Chain Analytics, Reliability Modeling, Operations Research, Machine Learning, NLP
+
+%----------EXPERIENCE-------------
+\section*{Professional Experience}
+\begin{itemize}
+    \resumeSubheading
+      {Decision Scientist, Supply Chain}{June 2024 -- Present}
+      {Accenture}{Kolkata, India}
+      \begin{itemize}
+          \resumeItem{
+            Developed an Inventory to Order matching and assignment tool for a Steel Manufacturer to optimize yield, 
+            reduce Inventory level and improve Service Level using a Multi Objective Greedy Heuristic algorithm.
+            Considering dimension, quality and chemistry as matching criteria, model was able to match best the Inventory to Order 
+            leading to $\sim$2.5 \% point extra yield and reduced the risk of material 
+            degragation and risk of not meeting order promise date by prioritizing older materials ($\sim$7 days) 
+            to older coils ($\sim$14 days).
+          }
+          \resumeItem{
+            Designed and Developed a Tail Spend Supplier Negotiation Tool for big Retailers/FMCG/CPG client to help automate negotiation
+            process with their suppliers using a chatbot agent to reduce workload on manual negotiations by $\sim$50\%. The tool leverages
+            GPT-4o-mini model in an Agentic framework to generate competitive offers within bounds of the levers set by the client. 
+          }
+          \resumeItem{
+            Developed a POC MILP model for an energy retailer/distributor company to optimize Vessel Routing and 
+            Scheduling process more efficiently to reduce Fixed Cost, Port operating cost, Demurrage Cost while
+            considering multiple factors like Inventory levels, Vessel utilization, port demand, berth availability etc
+          }
+      \end{itemize}
+
+    \resumeSubheading
+      {Data Scientist, Supply Chain}{Mar 2021 -- June 2024}
+      {General Mills}{Mumbai, India}
+      \begin{itemize}
+          \resumeItem{
+            Developed a MILP model to recommend daily optimal production plan of Snacks for a year horizon to reduce Changeover time, 
+            and balanced Inventory (balancing stockout and overflow). This tool can potentially save $\sim\$$2 MM/Year for a 
+            Manufacturing Line by reducing average inventory by $\sim$25 \%
+            and reducing changeover time by $\sim$15 \%
+          }
+          \resumeItem{
+            Developed a Generalized Linear Model (Poisson's Regression) with $\sim$50 \% $R^2$ to predict and recommend optimal controllable 
+            parameters range to bring down rejections (due to quality reason) of Regrigerated Frozen Baked Goods products, leading to expected 
+            savings of $\sim\$$800 M/year. 
+          }
+          \resumeItem{
+            Developed  a self-serve (Ramp Up Analysis) tool to improve System Reliability of Food Packaging Systems by
+            $\sim\$$1.5 \% leading to potential savings of $\sim\$$ 9 MM/Year. Using the mean shift Changepoint algorithm the tool identifies,
+            quantifies and recommends potential actions to perform on Manufacturing Line to improve Reliability.
+          }
+          \resumeItem{
+            Developed a Regression Tree model with $\sim$55 \% $R^2$ to predict rejection rate of Hard Taco Shell Manufacturing Line and suggest
+            optimal operating ranges of process control parameters to reduce rejection by 70-80 \% leading to $\sim\$$ 1 MM
+            yearly.
+          }
+          \resumeItem{
+            Developed a MILP model to recommend actions/suggestions in controlling line configurations in a Complex coupled
+            Snacks Manufacturing line to reduce overuse/overpack waste worth $\sim\$$ 100 M yearly.
+          }
+      \end{itemize}
+    
+    \resumeSubheading
+      {Analytics Consultant}{Nov 2020 -- Mar 2021}
+      {EXL Analytics}{Gurugram, India}
+      \begin{itemize}
+          \resumeItem{
+            Designed and developed a data model and dashboard using Power BI to help an eyewear retailer to improve 
+            effectiveness in marketing campaign, customer acquisition and tracking sales, profit.
+          }
+      \end{itemize}
+
+    \resumeSubheading
+      {Data Analyst Intern}{July 2019 -- Dec 2019}
+      {Tata Steel}{Kalinganagar, India}
+      \begin{itemize}
+          \resumeItem{
+            Developed an ensembled model (HP-LSTM-LSSVM) to accurately forecast byproduct gas demand and a MILP model to find optimal 
+            routing and allocations leading to reduction of $\sim$80-85 \% of wastage in byproduct gases produced during 
+            steel making process.
+          }
+      \end{itemize}
+\end{itemize}
+
+%----------PROJECTS---------------
+\section*{Academic Projects}
+\begin{itemize}
+    \resumeSubheading
+      {Automotive Domain Specific Sentiment Analysis using NLP}{}
+      {Python, nltk, scikit-learn}{}
+      \begin{itemize}
+        \resumeItem{
+          Developed domain specific sentiment dictionary to improve Sentiment Analysis ML Algorithms using NLP. Used
+          Amazon Automotive data to build domain specific corpus and updated sentiment scores of Sentiwordnet
+          dictionary. With new domain specific corpus F1 score improved by 5-10 \%
+        }
+      \end{itemize}
+
+    \resumeSubheading
+      {Supply Chain Network Strategy of a Retail Company}{}
+      {Python, CPLEX}{}
+      \begin{itemize}
+      \resumeItem{
+        Developed a MILP model to design optimal Supply Chain Network of a Retailer to enter into a new market with objectives 
+        in minimizing fixed costs, variable costs of manufacturing plants and retail stores, transportation cost of 
+        trucks and minivans, holding cost of Inventory and manufacturing cost.
+      }
+      \end{itemize}
+
+\end{itemize}
+
+%----------EDUCATION--------------
+\section*{Education}
+\begin{itemize}
+  \resumeSubheading
+    {M.Tech in Industrial Engineering, IIT Kharagpur}{June 2018 -- June 2020}
+    {Grade: 9.76 out of 10}{Kharagpur, India}
+    \begin{itemize}
+      \resumeItem{
+        Statistical Decision Modeling, Operations Research, Supply Chain Management, Production Planning and Inventory Control, 
+        Applied Multivariate Statistical Modelling, Stochastic Modelling
+      }
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+  \resumeSubheading
+    {B.Tech in Mechanical Engineering, GCETTB}{June 2014 -- June 2018}
+    {Grade: 8.71 out of 10}{Berhampore, India}
+\end{itemize}
+\begin{itemize}
+  \resumeSubheading
+    {Higher Secondary in Science, BNGHS}{June 2012 -- June 2014}
+    {Grade: 76.4\%}{Kolkata, India}
+\end{itemize}
+\begin{itemize}
+  \resumeSubheading
+    {Secondary, LHV}{June 2012 -- June 2014}
+    {Grade: 83.4\%}{Kolkata, India}
+\end{itemize}
+
+%----------CERTIFICATIONS---------
+\section*{Certifications}
+\begin{itemize}
+    \item Machine Learning | Stanford University
+    \item Deep Learning | Deeplearning.ai
+    \item Convolutional Neural Network | Deeplearning.ai
+    \item Sequential Models | Deeplearning.ai
+    \item Natural Language Processing with Tensorflow | Deeplearning.ai
+    \item SQL for Data Science | UC Davis
+    \item Introduction to Probability \& Data with R | Duke University
+    \item Algorithmic Toolbox | UC San Diego
+    \item Programming Foundation with Javascripts, HTML, CSS | Duke University
+    \item Linear Regression Modelling with R | Duke University
+    \item Java Programming | Solving Problems with Software | Duke University
+    \item Inferential Statistics with R | Duke University
+    \item Data Analytics Rapid Training Program | Great Learning
+    \item Generative AI with Large Language Models | Deeplearning.ai 
+\end{itemize}
+
+%----------AWARDS---------------
+\section*{Achievements \& Awards}
+\begin{itemize}
+    \item Rookie of Quarter | General Mills | 2021
+    \item Value Creator | General Mills | 2021
+    \item Shining Star | General Mills | 2021
+    \item Analytics Champion | General Mills | 2021
+    \item Runner up in Datalympics (Global level event)| General Mills | 2021
+    \item Runner up in Supply Chain Analytics Hackathon | General Mills | 2022
+    \item Runners Up in Innovation Challenge Competition in Supply Chain | General Mills | 2022
+    \item Way of Working Award | General Mills | 2023
+    \item Suply Chain Ninja Award | General Mills | 2023
+    \item Above and Beyond | Accenture | 2025
+\end{itemize}
+
+\end{document}
