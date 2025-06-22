@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1750474822.41563 "/Users/monojitmandal/Documents/mm/ds-resume/ds_resume.tex" "ds_resume.pdf" "ds_resume" 1750474823.40617 0
-  "/Users/monojitmandal/Documents/mm/ds-resume/ds_resume.tex" 1750474822.16872 11985 dc013a5776ba96f6c81d3dc8f03505a3 ""
+["pdflatex"] 1750593646.47573 "/Users/monojitmandal/Documents/mm/ds-resume/ds_resume.tex" "ds_resume.pdf" "ds_resume" 1750593647.2998 0
+  "/Users/monojitmandal/Documents/mm/ds-resume/ds_resume.tex" 1750593646.23608 10380 5a62773c7109b95bb17a32097f9d07b9 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -30,7 +30,9 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/latex-fonts/lasy9.tfm" 1136768653 520 1cc7cc05f4d7bae5c23bf7516f88fa52 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
@@ -93,9 +95,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1716644345.5177 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716644308 8221421 763cf44a224991605951b3b6f4d7f381 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ds_resume.aux" 1750474823.32973 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
-  "ds_resume.out" 1750474823.00265 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "ds_resume.tex" 1750474822.16872 11985 dc013a5776ba96f6c81d3dc8f03505a3 ""
+  "ds_resume.aux" 1750593647.22094 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
+  "ds_resume.out" 1750593646.95863 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ds_resume.tex" 1750593646.23608 10380 5a62773c7109b95bb17a32097f9d07b9 ""
   (generated)
   "ds_resume.aux"
   "ds_resume.log"

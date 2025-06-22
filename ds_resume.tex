@@ -65,20 +65,20 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
       {Accenture}{Kolkata, India}
       \begin{itemize}
           \resumeItem{
-            Developed an Inventory to Order matching algorithm for a Steel Manufacturer to optimize yield, 
-            Inventory and Service Leve using a Multi Objective Greedy Heuristic based optimization model. 
-            Considering dimension, quality and chemistry as matching criteria, model was able to pick the 
-            best order for inventories leading to $\sim$2.5\% better yield and selected older materials ($\sim$7 days) 
-            to older coils ($\sim$ 14 days) to reduce risk of material degradation and risk of not meeting target 
-            date for orders when compared against existing manual process.
-            }
-          \resumeItem{
-            Developed a Vendor Negotiation chatbot for big Retailers/FMCG/CPG to help automate negotiations with tail
-            spend suppliers (low volume/transaction) to help automate negotiations. Agentic Architecture with LLM was used to understand priority levers in
-            the negotiation process and based on set parameters it finds competitive offers for suppliers.
+            Developed an Inventory to Order matching and assignment tool for a Steel Manufacturer to optimize yield, 
+            reduce Inventory level and improve Service Level using a Multi Objective Greedy Heuristic algorithm.
+            Considering dimension, quality and chemistry as matching criteria, model was able to match best the Inventory to Order 
+            leading to $\sim$2.5 \% point extra yield and reduced the risk of material 
+            degragation and risk of not meeting order promise date by prioritizing older materials ($\sim$7 days) 
+            to older coils ($\sim$14 days).
           }
           \resumeItem{
-            Developed a POC MILP model for an energy retailer/distributor company to optimize Vessel Routing and
+            Designed and Developed a Tail Spend Supplier Negotiation Tool for big Retailers/FMCG/CPG client to help automate negotiation
+            process with their suppliers using a chatbot agent to reduce workload on manual negotiations by $\sim$50\%. The tool leverages
+            GPT-4o-mini model in an Agentic framework to generate competitive offers within bounds of the levers set by the client. 
+          }
+          \resumeItem{
+            Developed a POC MILP model for an energy retailer/distributor company to optimize Vessel Routing and 
             Scheduling process more efficiently to reduce Fixed Cost, Port operating cost, Demurrage Cost while
             considering multiple factors like Inventory levels, Vessel utilization, port demand, berth availability etc
           }
@@ -89,49 +89,29 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
       {General Mills}{Mumbai, India}
       \begin{itemize}
           \resumeItem{
-            Developed a MILP model to recommend daily optimal production plan of Snacks for a year horizon in such a
-            way that total Changeover time is minimum, and inventory level is balanced (balancing stockout and overflow).
-            This tool can potentially save $\sim\$$2 MM/Year for a Manufacturing Line by reducing average inventory by $\sim$25 \%
+            Developed a MILP model to recommend daily optimal production plan of Snacks for a year horizon to reduce Changeover time, 
+            and balanced Inventory (balancing stockout and overflow). This tool can potentially save $\sim\$$2 MM/Year for a 
+            Manufacturing Line by reducing average inventory by $\sim$25 \%
             and reducing changeover time by $\sim$15 \%
           }
           \resumeItem{
-            Reduction of Manufacturing waste in Refrigerated Frozen Baked Goods product by recommending optimal
-            controlling parameter ranges during the manufacturing process, leading to savings of $\sim\$$8 M/Year. Generalized
-            Linear Model (Poisson’s Regression) used to establish the relationship between Reject and controlling
-            parameters with R square of $\sim$50 \%.
+            Developed a Generalized Linear Model (Poisson's Regression) with $\sim$50 \% $R^2$ to predict and recommend optimal controllable 
+            parameters range to bring down rejections (due to quality reason) of Regrigerated Frozen Baked Goods products, leading to expected 
+            savings of $\sim\$$800 M/year. 
           }
           \resumeItem{
-            Developed Ramp Up Analysis tool (self-serve) to improve System Reliability of Manufacturing Systems by
-            $\sim\$$1.5\% leading to potential savings of $\sim\$$ 9 MM/Year. Using the mean shift Changepoint algorithm Ramp Up
-            and post Ramp Up phase were identified. A self-serve Dash App was developed to share actionable insights
-            to System Engineers and root cause analysis.
+            Developed  a self-serve (Ramp Up Analysis) tool to improve System Reliability of Food Packaging Systems by
+            $\sim\$$1.5 \% leading to potential savings of $\sim\$$ 9 MM/Year. Using the mean shift Changepoint algorithm the tool identifies,
+            quantifies and recommends potential actions to perform on Manufacturing Line to improve Reliability.
           }
           \resumeItem{
-            Developed Ramp Up Analysis tool (self-serve) to improve System Reliability of Manufacturing Systems by
-            $\sim$1.5\% leading to potential savings of $\sim\$$ 9 MM/Year. Using the mean shift Changepoint algorithm Ramp Up
-            and post Ramp Up phase were identified. A self-serve Dash App was developed to share actionable insights
-            to System Engineers and root cause analysis.
+            Developed a Regression Tree model with $\sim$55 \% $R^2$ to predict rejection rate of Hard Taco Shell Manufacturing Line and suggest
+            optimal operating ranges of process control parameters to reduce rejection by 70-80 \% leading to $\sim\$$ 1 MM
+            yearly.
           }
           \resumeItem{
-            Minimizing waste of Hard Taco Shell product using CART Model resulting in potential $\sim\$$ 1 MM savings in a
-            Year. Decision Tree, Random Forrest, XGBoost, Gradient Boost models are applied and compared with respect
-            to R2 metric and finally Decision Tree model was selected because of explainability. With R2 value of 0.6 the
-            model was able to recommend an optimal operating range of mixing and processing parameters.
-          }
-          \resumeItem{
-            Developed a tool to minimize overuse/overpack waste and providing visibility to Operators helped to save yearly 
-            $\sim\$$ 100,000 in a Manufacturing Line. MILP Optimization algorithm is used to optimize time to stop processing
-            system to balance surge while completing target production on time.
-          }
-          \resumeItem{
-            Developed an automated ML based approach to help Capacity Planners to understand whether Supply Chain
-            planning (horizon 24 months) needs to be revised or not, which can lead to savings of 300 employee hours per
-            month.
-          }
-          \resumeItem{
-            Developed a Bid Variance Dashboard using Tableau to help Transportation leaders to identify root causes of
-            difference in actual and bid numbers. Also, this provides a direction to the future scenario of bid considering
-            extension of current bid split.
+            Developed a MILP model to recommend actions/suggestions in controlling line configurations in a Complex coupled
+            Snacks Manufacturing line to reduce overuse/overpack waste worth $\sim\$$ 100 M yearly.
           }
       \end{itemize}
     
@@ -140,9 +120,8 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
       {EXL Analytics}{Gurugram, India}
       \begin{itemize}
           \resumeItem{
-            Developed a Power BI dashboard and self-serve data model for an eyeglass retailer Company to improve
-            marketing campaign of product and acquiring new customer, tracking sales, profit, margin etc. in real time
-            manner.
+            Designed and developed a data model and dashboard using Power BI to help an eyewear retailer to improve 
+            effectiveness in marketing campaign, customer acquisition and tracking sales, profit.
           }
       \end{itemize}
 
@@ -151,14 +130,15 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
       {Tata Steel}{Kalinganagar, India}
       \begin{itemize}
           \resumeItem{
-            Reducing 80 to 85\% of waste in byproduct gases produced during steel making process with the help of MILP
-            Optimization model. Time dependent parameters are estimated using complex ensembled based model (HP-LSTM-LSSVM).
+            Developed an ensembled model (HP-LSTM-LSSVM) to accurately forecast byproduct gas demand and a MILP model to find optimal 
+            routing and allocations leading to reduction of $\sim$80-85 \% of wastage in byproduct gases produced during 
+            steel making process.
           }
       \end{itemize}
 \end{itemize}
 
 %----------PROJECTS---------------
-\section*{Acadenic Projects}
+\section*{Academic Projects}
 \begin{itemize}
     \resumeSubheading
       {Automotive Domain Specific Sentiment Analysis using NLP}{}
@@ -176,10 +156,9 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
       {Python, CPLEX}{}
       \begin{itemize}
       \resumeItem{
-        Designed a Supply Chain Network of a new company which wanted to launch a product in a new city. With
-        survey data demand is forecasted and with all cost inputs (fixed \& variable cost in manufacturing, truck cost,
-        minivan cost, holding cost) a robust optimal network is built, and strategy of replenishment is developed using
-        MILP Optimization model to minimize total cost of Supply Chain.
+        Developed a MILP model to design optimal Supply Chain Network of a Retailer to enter into a new market with objectives 
+        in minimizing fixed costs, variable costs of manufacturing plants and retail stores, transportation cost of 
+        trucks and minivans, holding cost of Inventory and manufacturing cost.
       }
       \end{itemize}
 
@@ -193,7 +172,7 @@ Data Scientist with 5+ years of experience in building data-driven solutions usi
     {Grade: 9.76 out of 10}{Kharagpur, India}
     \begin{itemize}
       \resumeItem{
-        Relevant Coursework: Statistical Decision Modeling, Operations Research, Supply Chain Management, Production Planning and Inventory Control, 
+        Statistical Decision Modeling, Operations Research, Supply Chain Management, Production Planning and Inventory Control, 
         Applied Multivariate Statistical Modelling, Stochastic Modelling
       }
     \end{itemize}
