@@ -1,8 +1,8 @@
-PWD /Users/monojitmandal/Documents/mm/ds-resume
+PWD /Users/monojitmandal/Documents/mm/ds-resume/resume
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/monojitmandal/Documents/mm/ds-resume/ds_resume.tex
+INPUT /Users/monojitmandal/Documents/mm/ds-resume/resume/ds_resume.tex
 OUTPUT ds_resume.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
