@@ -44,87 +44,107 @@
 
 %---------- Functional Design Document (CPG Manufacturing Line) ----------
 \clearpage
-\section*{Functional Design Document --- Manufacturing Line (CPG)}
-\addcontentsline{toc}{section}{Functional Design Document --- Manufacturing Line (CPG)}
+\section*{Changeover Tie Out Tool: Fruit Rollups Line}
+\addcontentsline{toc}{section}{Functional Design Document}
 
-\subsection*{Purpose}
-This Functional Design Document (FDD) defines the functional requirements, architecture, interfaces, control logic, safety considerations, testing and deployment plan for a manufacturing line in a Consumer Packaged Goods (CPG) facility. It is intended for automation engineers, manufacturing engineers, operations, QA, IT (MES/ERP) and stakeholders responsible for design, integration, commissioning and maintenance.
+\subsection*{Business Context}
+Fruit Rollups system is a decoupled manufacturing system (time between 
+processing and packaging more than 10 mins) which produces multiple flavor 
+SKUs. It has multiple processing and packaging lines. Most of the times 
+multiple flavors products are being produced. When producing multiple 
+flavor products, flavours are being distributed across line (both 
+processing and packaging). Also each line has its own production rate 
+since many times lines are getting stopped due to failure of equipments. 
+There is a surge belt which accumulates the processed products before 
+packaging. When processing rates are higher than packaging rates surge 
+belt accunulates and reversely surge accumulation decreases when packaging 
+rates are higher than processing rates. Changing over to a new product 
+is very challenging as it requires balancing of flavors across lines, 
+line rates and surge levels.
 
-\subsection*{How to use this template}
+
+\subsection*{Problem Statement}
+Fruit Rollups manufacturing system causes overuse or overpack loss during 
+changeover to a new product due to below reasons:
 \begin{itemize}
-  \item Fill plant- and line-specific information in each section. Replace placeholders with diagrams, I/O tables and interface specs.
-  \item Attach detailed PLC I/O tables, MES interface schemas and FAT/SAT scripts as appendices or separate files and reference them here.
-  \item Use the checklists before FAT and commissioning to ensure completeness.
+  \item Lack of visibility of surge of any flavor
+  \item Inefficient distributions of flavors over lines due to human 
+  operator's decisions
+  \item Unexpected equipment failure causing lines to stop and makes 
+  difference in line rates (processing and packaging)
+  \item Lack of knowledge on time to stop processing lines.
 \end{itemize}
+Waste can be minimized by optimizing the flavour distribution, line rate 
+and time to stop processing lines.
+\\
+There is need of a tool at the shop floor to help operators to control
+manufacturing operations better and make changeover efficient.
 
 \subsection*{Document metadata}
 \begin{tabular}{ l l }
-Version: & 0.1 \\
-Author: & \\
-Date: & \\
-Reviewers: & \\
-Status: & Draft / Review / Approved \\
-Related documents: & P\&ID, Electrical Single Line, Standards, Safety regs \\
+Version: &\ 0.1 \\
+Author: & \ Monojit Mandal\\
+Date: & \ 2025-12-27\\
 \end{tabular}
 
 \subsection*{Executive summary}
-Provide a short description of the line (product family, packaging, target throughput) and the primary business goals (OEE, throughput, yield, changeover time).
+A real time mathematical optimization model helps the operator to decide
+the optimal time to stop processing lines to reduce overpack or overuse loss.
 
 \subsection*{Scope}
-  	extbf{In scope:} e.g. filling, capping, labeling, inspection, case packing, palletizing.
-
-  	extbf{Out of scope:} e.g. utilities, warehouse systems unless explicitly stated.
-
-  	extbf{Assumptions:} e.g. existing MES available, plant network in place, spare parts available.
+operators are interested to know when to stop processing lines to tackle flavor
+imbalance across lines and surge levels. The tool will only provide them the 
+recommendations on stoppage time with additional informations like line rates,
+surge levels, target production or target time to stop manufacturing.
 
 \subsection*{Stakeholders \& roles}
-Business owner / Product owner; Manufacturing engineer; Automation engineer (PLC/HMI); Integration / MES engineer; QA; IT/Network; Safety/EHS; Maintenance.
+\begin{tabular}{ l l }
+Product Owner: &\ Monojit Mandal \\
+Business Stakeholders: & \ Monojit Mandal\\
+Technical Stakeholders: & \ Monojit Mandal\\
+\end{tabular}
 
 \subsection*{Background \& context}
-Link to floorplan and existing automation. Note constraints such as space, regulatory, or legacy systems to integrate.
+Operators in Fruit Rollups manufacturing facility reported chanllenges in 
+operating the lines due to frequent machine failures of machines and lack of 
+visibility in surge level data. Mainly during changeover operators faced 
+difficulty to avoid overuse loss. If they could avoid overuse loss they could
+ssave 100,000 USD per year
 
 \subsection*{Goals and success criteria}
-List measurable goals and acceptance criteria. Example:
 \begin{itemize}
-  \item Throughput: $\geq$ 1200 units/hour measured over an 8-hour shift.
-  \item OEE target: $\geq$ 85\% after 90 days.
-  \item Quality: critical defect rate $<$ 0.5\%.
+  \item Overuse Loss: 10--20\% reduction
+  \item Monetary Savings: 100,000 USD per year
 \end{itemize}
 
-\subsection*{System overview / architecture}
-Describe the major subsystems and their responsibilities:
-\begin{itemize}
-  \item Field layer: sensors, actuators, drives, safety relays.
-  \item Control layer: PLC(s), safety PLC, HMI/operator panels.
-  \item Supervisory: SCADA, Historian.
-  \item Execution: MES (orders, genealogy, traceability).
-  \item Enterprise: ERP.
-  \item Network and cybersecurity zone segmentation.
-\end{itemize}
-
-    extbf{Diagram placeholders:}
-\begin{itemize}
-  \item \textit{Topology diagram:} insert as a figure (e.g., \verb|/diagrams/network_topology.png|) or embed a vector image.
-  \item \textit{PLC rack/layout:} attach a PDF or PNG of rack layout.
-\end{itemize}
-
+\subsection*{System overview / Architecture}
+Fruit Rollups manufacturing system starts with slurry preparation which happens
+in drums. There are 4 drums which prepares slurry. Each drum is connected 
+to 2 processing lines. Flavours are being added in these processing lines
 \begin{figure}[h]
   \centering
-  % Replace the following line with \includegraphics if you add an actual diagram file.
-  \fbox{\parbox[c][2.5cm][c]{0.9\textwidth}{\centering Insert network / system topology diagram here}}
+  % Include the actual diagram from the assets folder.
+  \includegraphics[width=0.9\textwidth]{assets/Gemini_Fruit_Rollups_System.png}
   \caption{System topology (placeholder)}\label{fig:topology}
 \end{figure}
 
 \subsection*{Functional components and responsibilities}
-For each subsystem include purpose, inputs, outputs, and acceptance criteria. Example entries:
+For each subsystem include purpose, inputs, outputs, and acceptance criteria. 
+Example entries:
 \begin{description}
-  \item[Conveyors:] Purpose -- product movement and buffering. Inputs -- start/stop, speed setpoint, sensors. Outputs -- encoder feedback, fault signals. Acceptance -- belt speed within $\pm$5\% under load.
-  \item[Filling station:] Purpose -- dispense target volume with accuracy. Inputs -- recipe, product ID, level sensors. Outputs -- valve commands, dispense logs. Control -- closed-loop dosing.
-  \item[Capping:] Purpose -- apply/torque caps. Include torque checks and presence sensors.
+  \item[Conveyors:] Purpose -- product movement and buffering. Inputs -- 
+  start/stop, speed setpoint, sensors. Outputs -- encoder feedback, fault 
+  signals. Acceptance -- belt speed within $\pm$5\% under load.
+  \item[Filling station:] Purpose -- dispense target volume with accuracy. 
+  Inputs -- recipe, product ID, level sensors. Outputs -- valve commands, 
+  dispense logs. Control -- closed-loop dosing.
+  \item[Capping:] Purpose -- apply/torque caps. Include torque checks and 
+  presence sensors.
 \end{description}
 
 \subsection*{Control strategies and sequences}
-Describe PLC state machines and key sequences: start/stop, emergency stop, changeover, recipe download and validation, manual/auto modes.
+Describe PLC state machines and key sequences: start/stop, emergency stop, 
+changeover, recipe download and validation, manual/auto modes.
 
   extbf{Example (sequence):}
 \begin{enumerate}
@@ -148,7 +168,8 @@ status & enum & start / stop / fault / complete \\
 \hline
 \end{tabularx}
 
-Specify data retention policy (e.g., 1s raw data for 90 days, aggregated metrics for 3 years).
+Specify data retention policy (e.g., 1s raw data for 90 days, aggregated 
+metrics for 3 years).
 
 \subsection*{Interfaces and integration}
 Provide an interface table for each integration pair. Template:
